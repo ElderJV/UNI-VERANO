@@ -209,3 +209,13 @@ Formulas:
 
 ![cap3](/Images/cap3.png)
 
+No siempre es necesario calcular el nivel de confianza, he aqui una **tabla con los valores mas comunes:**
+
+| Nivel de Confianza | Calificacion Z |
+| :-: | :-:     |
+| 0.90   | 1.645  | 
+| 0.95   | 1.96  | 
+| 0.98   | 2.33  |
+| 0.99   | 2.575  |  
+
+# Distribución Muestral
