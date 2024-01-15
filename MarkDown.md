@@ -54,8 +54,7 @@ print (Hello word!!)
 
 <!-- Imagen Local-->
 
-![CapPeru](CapPeru.jpeg "Orgullo Peruano")
-
+![CapPeru](/Images/CapPeru.jpeg "Orgullo Peruano")
 <!-- Git Hub MarkDown -->
 
 * [x] Task 1
