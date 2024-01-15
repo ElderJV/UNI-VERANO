@@ -66,3 +66,8 @@ x1 = monto de sueldo de un ingeniero de la muestra
 **Estadistico:**
 Sueldo promedio de todos los ingenieros de la empresa
 
+## Tipos de muestreo
+* Muestreo aleatorio simple
+* Muestreo sistematico
+* Muestreo Estratificado
+
