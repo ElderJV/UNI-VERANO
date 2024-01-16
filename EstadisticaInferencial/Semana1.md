@@ -219,3 +219,72 @@ No siempre es necesario calcular el nivel de confianza, he aqui una **tabla con 
 | 0.99   | 2.575  |  
 
 # Distribución Muestral
+Se habla de la teoria del muestreo la cual consiste en inferir datos de la poblacion a travez de las muestras o estadisticos.
+
+Una distribucion muestral se forma al obtener distintos parametros estadisticos como la desviacion estandar, la media etc...
+
+**Para una muestra de una población finita:**
+$$
+\begin{aligned}\mu_{\bar{X}}&=\mu\\\sigma_{\bar{X}}&
+=\frac\sigma{\sqrt{n}}\end{aligned}
+
+$$
+- $(\mu_{\bar{X}}$) es la media de la distribución muestral de la media.
+- $(\sigma_{\bar{X}}$) es la desviación estándar de la distribución muestral de la media.
+- $(\mu)$ es la media de la población.
+- $(\sigma$) es la desviación estándar de la población.
+- $(n$) es el tamaño de la muestra.
+
+
+**Para una muestra de una población infinita o de una población finita cuando se extraen sin reemplazo:**
+$$
+\begin{aligned}
+\mu_{\bar{X}} &= \mu \\
+\sigma_{\bar{X}} &= \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}
+\end{aligned}
+$$
+- $(\mu_{\bar{X}}$) es la media de la distribución muestral de la media.
+- $(\sigma_{\bar{X}}$) es la desviación estándar de la distribución muestral de la media.
+- $(\mu$) es la media de la población.
+- $(\sigma$) es la desviación estándar de la población.
+- $(n$) es el tamaño de la muestra.
+- $(N$) es el tamaño de la población.
+---
+Si $N$ es demasiado grande con respecto a $n$ tal que $\frac{n}{N}\leq0.05$ entonces $\frac{N-n}{N-1}$ tiende a 1, por lo que esto no afecta a la generalidad.
+
+### Ejercicio Explicativo
+Los puntajes en el grado de satisfacción de un grupo de profesionales en el salario están normalmente distribuidos con una media de 56 y una desviación estándar de 16. ¿Cuál es la probabilidad de que una muestra aleatoria de 25 de estos profesionales arroje un puntaje promedio entre 55 y 58?
+
+**Se tienen los siguientes datos:**
+
+$\mu$ = 56
+
+$\sigma$ = 16
+
+$n$ = 25
+
+Nos piden:
+$P(55\leq X\leq58)$
+
+En el problema se da a entender que la poblacion es normal por lo tanto se tiene que:
+
+${\bar{X}}$ = 56
+
+$\sigma_{\bar{X}}$ = $\frac{16}{\sqrt{25}}$ = 3.2
+
+$$
+\begin{gathered}
+P(55\leq\bar{X}\leq58)=P(\frac{55-56}{3.2}\leq\frac{X-\mu}{\sigma_{\bar{X}}}\leq\frac{58-56}{3.2}) \\
+=P(-0,31\leq Z\leq0.63) \\
+=P(Z\leq0.63)-P(Z\leq-0.31) \\
+=0.7357-0.3745 \\
+\text{=0.3612} 
+\end{gathered}
+$$
+
+La probabildad de que una muestra aleatorioa de 25 de estos profecionales arroje un puntaje promedio entre 55 y 58 es de 32.16%
+
+
+# Distribucion muestral de medidas con varianza conocida
+
+
