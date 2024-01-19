@@ -416,5 +416,3 @@ $$
 Un equipo de psicólogos está investigando si existen o no diferencias entre dos métodos de relajación para reducir la ansiedad. Para lo cual se seleccionan dos muestras de tamaño 10 cada una, a las que se les aplicó el método **X** e **Y** respectivamente. Obteniéndose que las varianzas muestrales son de 3.7 y 4.2 puntos respectivamente. Suponiendo que las puntuaciones de ansiedad de ambas poblaciones siguen distribuciones muestrales con medias poblacionales de 90 y 87.3 puntos respectivamente y que las varianzas poblacionales son desconocidas pero se sabe que son diferentes. Hallar la probabilidad de la media muestral de puntuación del método **X** sea como mínimo 6 unidades mayor que el método **Y**.
 
 ![Solucion3](../Images/DiferenciaDosMediasEX3.png)
-
-
