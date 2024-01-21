@@ -25,12 +25,10 @@ Tambien llamado **error de tipo I** son sucesos fortuitos o extraños que pueden
 ---
 ![Confianza](../Images/Confianza.png)
 
-# Intervalo de confianza de la media con varianza conocida
-
 **Emplearemos Z cuando:**
 
-* $n\geq30$ y $\sigma^2$ conocida
-* $n<30$ y $\sigma^2$ conocida
+* $n\geq30$ y $\sigma^2$ (Varianza Poblacional) conocida
+* $n<30$ y $\sigma^2$ (Varianza Poblacional) conocida
 
 **Intervalo de confianza IC**
 
@@ -43,3 +41,81 @@ $$
 $$
 |\bar{X}-\mu|\leq\frac{Z_{1-\frac\alpha2}\cdot\sigma}{\sqrt{\mathrm{n}}}
 $$
+
+# Intervalo de confianza de la media con varianza desconocida
+
+![GrapficoDistribucion](../Images/GraficoDistribucion.png)
+
+**Caso A)**
+
+**Emplearemos T :** Si tenemos una muestra aleatoria, poblacion normal, $n$ < 30 y $\sigma^2$ (Varianza Poblacional) desconocida. 
+
+Para estos casos utilizamos la tabla t-student para tamaños de muestra $n$ < 30
+
+**Formula:**
+$$
+\mathbf{T_{n-1}}={\frac{\overline{\mathbf{X}}-\mathbf{\mu}}{\frac{\mathbf{S}}{\sqrt{\mathbf{n}}}}}
+$$
+
+$$
+{T_{(1-\frac\alpha2,gl)}}
+$$
+
+$$
+\mathsf{IC}{:}\quad\bar{X}-T_{(1-\frac{\alpha}{2},gl)}\cdot\frac{S}{\sqrt{n}}\leq\mu\leq\bar{X}+T_{(1-\frac{\alpha}{2},gl)}\cdot\frac{S}{\sqrt{n}}
+$$
+
+* Como $\sigma2$ (Varianza Poblacional) no se conoce se estima con $S^2$ (Desviacion Estandar Muestral)
+* La distribucion se desvia de forma notable cuando los grados de libertad $gl$ son pequeños.
+* Los grados de libertad se pueden expresar asi : $(gl=n-1)$ o $(v=n -1)$
+---
+**Caso B)**
+
+**Emplearemos Z :** Si $n$ >= 30 y $\sigma^2$ (Varianza Poblacional) desconocida.
+
+---
+**Imagen Resumen:**
+
+![ResumenIntervaloConfianza](../Images/ResumenFormulasIntervalosDeConfianza.png)
+
+# Intervalos de confianza para la diferencia de medidas muestrales con varianza conocida y desconocida
+
+**Conocida:**
+
+Si $X_1-X_2$ son las medias de dos muestras aleatorias independientes de tamaño $n_1-n_2$, tomadas de poblaciones que tiene **varianzas** $\sigma_1^2$ , $\sigma_2^2$ **conocidas** respectivamente, entonces el intervalo de confianza para $\mu_1 - \mu_2$ es:
+
+$$
+IC(\mu_1-\mu_2)=\left[\bar{X}_1-\bar{X}_2\pm Z_{\left(1-\frac{\alpha}{2}\right)}\cdot\sqrt{\frac{\sigma_1{}^2}{n_1}+\frac{\sigma_2{}^2}{n_2}}\right]
+$$
+
+<div align="center">
+
+**Se usa Z cuando:**
+
+| Muestras grandes | Muestras Pequeñas |
+| :-: | :-: |
+| ($n_1\geq 30, n_2\geq30$) | ($n_1<30,n_2<30$) |
+| Varianzas conocidas $\sigma^2$ | Varianzas conocidas $\sigma^2$ | 
+| Poblaciones Normales o no | Poblaciones Normales |
+
+</div>
+
+**Interpretaciones Adicionales segun los intervalos obtenidos:**
+
+$$
+IC(\mu_1-\mu_2)
+$$
+$\mu_1$ : Limite Superior
+
+$\mu_2$ : Limite Inferior
+
+* Cuando los signos del límite inferior y superior son positivos, se concluye que el promedio de la población 1 es mayor al promedio de la población 2, si ambos son negativos, la poblacion 1 es menor al promedio de la poblacion 2.
+
+---
+**Desconocida:**
+
+
+
+
+
+
