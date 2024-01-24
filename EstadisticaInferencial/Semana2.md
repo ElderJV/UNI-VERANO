@@ -101,7 +101,7 @@ $$
 | Muestras grandes | Muestras Pequeñas |
 | :-: | :-: |
 | ($n_1\geq 30, n_2\geq30$) | ($n_1<30,n_2<30$) |
-| Varianzas conocidas $\sigma^2$ | Varianzas desconocidas $\sigma^2$ | 
+| Varianzas conocidas $\sigma_1^2$ y $\sigma_2^2$ | Varianzas desconocidas $\sigma^2$ | 
 | Poblaciones Normales o no | Poblaciones Normales |
 
 </div>
@@ -122,6 +122,22 @@ $\mu_2$ : Limite Superior
 
 **Caso 1)**
 
+* Muestras grandes $n >30$
+* Varianzas poblacional desconocida
+* Como $\sigma2$ (Varianza Poblacional) no se conoce se estima con $S^2$ (Desviacion Estandar Muestral)
+
+$$
+{S_P}^2=\frac{(n_1-1){S_1}^2+(n_2-1){S_2}^2}{n_1+n_2-2}
+$$
+
+
+**Formula:**
+$$
+(\overline{X}_{1} - \overline{X}_{2}) \pm Z_{\left(1-\frac{\alpha}{2}\right)} \sqrt{\frac{S_{1}^{2}}{n_{1}} + \frac{S_{2}^{2}}{n_{2}}}
+$$
+
+**Caso 2)**
+
 * Muestras Pequeñas $n_1<30,n_2<30$)
 * Varianzas poblacionales desconocidas pero iguales ${\sigma^{2}}_{1}={\sigma^{2}}_{2}={\sigma^{2}} $
 * Poblaciones Normales
@@ -139,7 +155,7 @@ $$
 (X_{1}-X_{2})-T_{(1-\frac{\alpha}{2},gl)}\sqrt{S_{P}^{2}(\frac{1}{n_{1}}+\frac{1}{n_{2}})}\le\mu_{1}-\mu_{2}\le(X_{1}-X_{2})+T_{(1-\frac{\alpha}{2},gl)}\sqrt{S_{P}^{2}(\frac{1}{n_{1}}+\frac{1}{n_{2}})}
 $$
 
-**Caso 2)**
+**Caso 3)**
 
 * Muestras Pequeñas $n_1<30,n_2<30$)
 * Varianzas poblacionales desconocidas y diferentes $(\sigma_{1}{}^{2}\neq\sigma_{2}{}^{2})$
