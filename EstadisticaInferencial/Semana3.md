@@ -63,3 +63,108 @@ $$
 **Importante:** No rechazar la Hipotesis nula no significa que sea valida, en este caso es falta de evidencia.
 
 ## Ejemplo para plantear Hipótesis
+Una empresa de Marketing Industrial está considerando Ia introducción de un nuevo plan de servicio para piezas hidráulicas. El plan será presentado si se prefiere por más del 40% de los clientes:
+
+*Lenguaje Estadistico:*
+
+* $H_0:\pi\leq40$%
+* $H_1:\pi\leq40$% ---> Lo que el investigador espera
+
+Si se rechaza la Hipótesis nula $H_0$, se aceptará la alterna $H_1$ y se introducirá el nuevo servicio, si no se puede rechazar la hipótesis nula $H_0$, el nuevo plan de servicio no debería introducirse a menos que se obtenéa una evidencia adicional.
+
+*Esta prueba tiene una dirección (mayor 40%), por lo tanto, es una prueba de una cola superior.*
+
+---
+### Tipos de Errores
+* **Error Tipo I:** Rechazar una hipotesis nula cuando es verdadera, la probabilidad de cometer este error es $\alpha$ esto es llamado nivel de significancia.
+
+* **Error Tipo II:** Aceptar una hipotesis nula cuando es falsa, la probabilidad de cometer este error es de $\beta$.
+
+Potencia de prueba: Probabilidad de rechazar una hipotesis nula que es falsa $1-\beta$.
+
+![tablaDErrores](../Images/tablaErrores.png)
+
+---
+## Procedimiento para realizar una prueba de hipótesis
+
+* **Plantear la hipotesis**
+![graficoHipotesis](../Images/graficoHipotesis.png)
+* **Fijar el nivel de significancia $\alpha$**
+
+* **Identificar el estadistico de prueba $Z,T,X_2$**
+    
+    **Varianza poblacional Conocida ($\sigma$)**
+    $$
+    Z_c=\frac{\bar{x}-\mu_{\mathrm{hip}}}{\frac\sigma{\sqrt{n}}}
+    $$
+    $\mu_{\mathrm{hip}}=\mu_0$
+
+    **Varianza poblacional Desconocida ($S$)**
+
+    Tamaño de muestra grande $n\geq30$
+    $$
+    Z_c=\frac{\bar{x}-\mu_{\mathrm{hip}}}{\frac{S}{\sqrt{n}}}
+    $$
+    Tamaño de muestra pequeño $n<30$
+    $$
+    T_c=\frac{\bar{x}-\mu_{\mathrm{hip}}}{\frac{S}{\sqrt{n}}}
+    $$
+    Grados de libertad = $n-1$
+* **Formular y establecer la regla de decicion bajo la cual se rechaza o no $H_0$.**
+
+    ![graficoRechazo](../Images/regionRechazo.png)
+* **Tomar la decicion en base a la evidencia muestral**
+
+    Con los datos de la muestra hallar el valor del estadístico de prueba Z o t, llamado $Z_{cal}$ o $T_{cal}$
+    * Rechazar $H_0$ si $Z_{cal}$ o $T_{cal}$ se encuentra en la region de rechazo.
+    * No rechazar $H_0$ si $Z_{cal}$ o $T_{cal}$ se encuentra en el region de no rechazo.
+
+* **Expresar las conclusiones en base al problema**
+---
+## Prueba de hipotesis para la diferencia de medias
+
+<div align="center">
+
+**Se usa Z cuando:**
+
+| Muestras grandes | Muestras Pequeñas |
+| :-: | :-: |
+| ($n_1\geq 30, n_2\geq30$) | ($n_1<30,n_2<30$) |
+| Varianzas poblacionales conocidas $\sigma_1^2$ y $\sigma_2^2$ | Varianzas poblacionales desconocidas $\sigma_1^2$ y $\sigma_2^2$ | 
+| Poblaciones Normales o no | Poblaciones Normales |
+
+</div>
+
+*Se sigue los procedimientos para la prueba de hipótesis anteriormente mencionados*
+
+**Identificar el estadistico de prueba**
+    
+* **Varianza poblacional conocida** $(n>30)$
+$$
+Z_C=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
+$$
+
+* **Varianza poblacional desconocida**
+$$
+Z_C=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{\frac{S_1}{n_1}+\frac{S_2}{n_2}}}
+$$
+* **Varianza poblacional desconocida, pero iguales $\sigma_1^2=\sigma_2^2$**
+
+    **Donde:**
+    $$
+    {S_P}^2=\frac{(n_1-1){S_1}^2+(n_2-1){S_2}^2}{n_1+n_2-2}
+    $$
+    $$
+    T_C=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{Sp^2\left(\frac1{n_1}+\frac1{n_2}\right)}}
+    $$
+
+* **Varianza poblacional desconocida, pero diferentes $\sigma_1^2\neq\sigma_2^2$**
+
+    **Grados de Libertad: V**
+    $$
+    V=\frac{\left(\frac{s_1}{n_1}^2+\frac{s_2^2}{n_2}\right)^2}{\frac{\left(\frac{s_1}{n_1}^2\right)^2}{n_1-1}+\frac{\left(\frac{s_2}{n_2}^2\right)^2}{n_2-1}}
+    $$
+    $$
+    T_{Cal}=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}}}
+    $$
+**Luego identificar el valor estadistico de prueba ya sea Z o T**
