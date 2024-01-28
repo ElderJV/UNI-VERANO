@@ -144,9 +144,9 @@ $$
 Z_C=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
 $$
 
-* **Varianza poblacional desconocida**
+* **Varianza poblacional desconocida** ($n>30$)
 $$
-Z_C=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{\frac{S_1}{n_1}+\frac{S_2}{n_2}}}
+Z_C=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}}}
 $$
 * **Varianza poblacional desconocida, pero iguales $\sigma_1^2=\sigma_2^2$**
 
@@ -168,3 +168,4 @@ $$
     T_{Cal}=\frac{\bar{X}_1-\bar{X}_2-(\mu_1-\mu_2)_{hip}}{\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}}}
     $$
 **Luego identificar el valor estadistico de prueba ya sea Z o T**
+
