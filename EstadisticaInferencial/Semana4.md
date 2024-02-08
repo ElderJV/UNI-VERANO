@@ -69,3 +69,38 @@ $$
     * Rechazar $H_0$ si $X^2_{cal}$ se encuentra en la región de
     rechazo.
     * No Rechazar $H_0$ si $X^2_{cal}$ se encuentra en la región de no rechazo.
+
+# Pueba de Hipotesis de media
+
+1. **Planteamiento de la Hipotesis**
+$$
+\begin{array}{cccc}H_0\colon\mu=\mu_0&&H_0\colon\mu\leq\mu_0&&H_0\colon\mu\geq\mu_0\\H_1\colon\mu\neq\mu_0&&H_1\colon\mu>\mu_0&&H_1\colon\mu<\mu_0\end{array}
+$$
+2. **Fijar el nivel de significancia $\alpha$**
+3. **Estadistico de Prueba**
+
+* Varianza Poblacional Conocida
+
+    $$
+    Z_{c}=\frac{\bar{x}-\mu_{hip}}{\frac{\sigma}{\sqrt{n}}}
+    $$
+
+* Varianza Desconocida y tamaño de muestra grande ($n\geq30$)
+
+    $$
+    \mathbb{Z}_{c}=\frac{\bar{x}-{\mu}_{hip}}{\frac{S}{\sqrt{n}}}
+    $$
+
+* Varianza Desconocida y tamaño de muestra pequeño ($n<30$)
+    
+    **Grados de Libertad:** $n-1$
+    $$
+    \mathrm{T}_{c}=\frac{\bar{x}-\boldsymbol{\mu}_{hip}}{\frac{\mathcal{S}}{\sqrt{n}}}
+    $$
+4. **Region de rechazo**
+![graficoRechazo](../Images/regionRechazo.png)
+5. **Decicion estadistica**
+
+    Con los valores de la muestra hallar el valor de la estadística de prueba Z o t, llamado $Z_{cal}$ o $t_{cal}$
+    * Rechazar $H_0$ si $Z_{cal}$ o $t_{cal}$ se encuentra en la región de rechazo.
+    * No Rechazar $H_0$ si $Z_{cal}$ o $t_{cal}$ se encuentra en la región de no rechazo.
