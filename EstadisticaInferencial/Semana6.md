@@ -157,9 +157,10 @@ Prueba de Kolmogorov Smirnov (KS): Es una prueba no paramétrica que determina *
 
 4. Por tanto, el criterio para rechazar o aceptar la prueba de hipótesis es:
 
-   - Si D Da => Aceptar Ho
-   - Si D > Da => Rechazar Ho
-     Donde:
+   - Si $D_\alpha\geq{D_{max}}$ (Aceptar Ho)
+   - Si $D_\alpha\leq{D_{max}}$ (Rechazar Ho)
+
+     **Donde:**
 
      $$
      D_{\alpha}=\frac{C_{\alpha}}{k(n)}
@@ -175,7 +176,102 @@ Prueba de Kolmogorov Smirnov (KS): Es una prueba no paramétrica que determina *
 
 ## Prueba de Shapiro Wilk
 
-El Test de Shapiro—Wilk se usa para contrastar la normalidad de un conjunto de datos y plantea como hipótesis nula que una muestra xl,x2 xn, proviene de una población normalmente distribuida. Fue publicado en 1965 por Samuel Shapiro y Martin Wilk. Se considera uno
-de los test más potentes para el contraste de normalidad.
-1.- Ho: Los datos de la muestra siguen una distribución normal estándar
-111: Los datos de la muestra no siguen una distribución normal estándar
+El Test de Shapiro—Wilk se usa para contrastar la normalidad de un conjunto de datos y plantea como hipótesis nula que una muestra x1,x2, xn, proviene de una población normalmente distribuida. Fue publicado en 1965 por Samuel Shapiro y Martin Wilk. Se considera uno de los test más potentes para el contraste de normalidad.
+
+1.  - Ho: Los datos de la muestra siguen una distribución normal estándar
+    - H1: Los datos de la muestra no siguen una distribución normal estándar
+
+2.  $\alpha$= 0.1, 0.05, 0.01
+3.  El estadístico del test es:
+
+    $$
+    W=\frac{(\sum_{i=1}^n\alpha_ix(i))^2}{\sum_{i=1}^n(x_i-\overline{x})^2}
+    $$
+
+    **Donde:**
+
+    - Xi es el número que ocupa la vigésima posición en la muestra (con la muestra ordenada de mayor a menor)
+    - $x$ es la media muestral
+    - Las variables (a1, a2...an) se calculan de la siguiente manera:
+
+      $$
+      (a_1,\ldots,a_n)=\frac{m^TV^{-1}}{(m^TV^{-1}V^{-1}m)^{1/2}}
+      $$
+
+      Siendo (m1, m2, ....., mn) los valores medios del estadístico ordenado de variables aleatorias independientes e idénticamente distribuidas, muestreadas de distribuciones normales.
+
+      V denota la matriz de covarianzas de este estadístico de orden.
+
+4.  En esta prueba se rechazará si el estadístico W es menor a $W\alpha$ o si el estadístico p-valúe es menor a $\alpha$(nivel de significación).
+5.  Conclusiones
+
+# Prueba Chi-Cuadrado
+
+- **Una Variable:** Prueba bondad de ajuste
+- **Dos Variables:** Prueba de Independencia ->Prubeba de Homogeneidad (Proporciones)
+
+**Usos**
+
+- Para hacer inferencias acerca de la varianza poblacional. Es decir, para calcular Intervalos de Confianza y Prueba de Hipótesis para la varianza poblacional.
+- Para hacer pruebas de Bondad de Ajuste. O sea, para probar si un conjunto de datos sigue una distribución predeterminada.
+- Para hacer análisis de tablas de contingencia.
+
+![graficaChicuadarado](../Images/DistribucionChi-Cuadrado.png)
+Nivel de significancia = $\alpha$
+
+grados de libertad = $n-1$
+
+$$
+Xi(\alpha,(n-1))
+$$
+
+# Prueba de Bondad de ajuste
+
+En diversas situaciones se requiere conocer si la data muestral proviene o no de una determinada distribución probabilística. ¿Cómo proceder?
+
+La prueba de bondad de ajuste Chi-cuadrado es una prueba estadística que permite determinar si una data muestral proviene o no de una hipotética distribución.
+
+¿Los datos de la muestra son coherentes con una distribución supuesta?
+
+## Prueba de Independencia
+
+1. **Plantear Hipotesis**
+
+- Ho: Los datos se ajustan a una distribución específica (Uniforme, Poisson, Binomial, Normal)
+- H1: Los datos NO se ajustan a una distribución específica (Uniforme, Poisson, Binomial, Normal)
+
+2. **Establecer el nivel de significación:**
+
+   $\alpha$=1%,5%,10%,etc...
+
+3. **Estadistico de prueba**
+
+   $$
+   {X_C}^2=\frac{\sum{(O_i-E_i)^2}}{E_i}
+   $$
+
+   **Donde:**
+
+- O: frecuencia observada Generalmente dato del problema
+- E: frecuencia esperada -> Se tiene que estimar y depende del tipo de la distribución
+
+  La frecuencia esperada depende de la distribución que se quiere probar:
+
+- Distribucion de Poisson
+  $$
+  f(X,\lambda)=\frac{e^{-\lambda}\lambda^X}{X!}
+  $$
+- Distribucion Binomial
+  $$
+  P(x)=\binom nxp^Xq^{n-X}
+  $$
+
+4.  **Region Critica**
+
+    ![Xi-cuadrado](../Images/regionCriticaXiCuadrado.png)
+
+    $gl = k-m-1$
+
+    Donde: $K$ = Número de categorias o clases | $m$ = Número de parametros estimados
+5. **Descicion estadistica y conclusiones**
+
