@@ -126,6 +126,8 @@ $$
 
 Se aplica para comprobar si la distribución de datos de una muestra se ajusta a una Distribución Normal Teórica. Existen diversas pruebas para comprobar si una distribución de datos se ajusta a una distribución normal. Para nuestro análisis aplicaremos la Prueba de Kolmogorov Smirnov:
 
+## Prueba de Kolmogorov Smirnov:
+
 Prueba de Kolmogorov Smirnov (KS): Es una prueba no paramétrica que determina **la bondad de ajuste de un conjunto de datos con una distribución específica**. Se deben realizar los siguientes pasos:
 
 1. **Planteamiento de la Hipotesis**
@@ -153,7 +155,27 @@ Prueba de Kolmogorov Smirnov (KS): Es una prueba no paramétrica que determina *
 
   Por tanto, a partir de estos Valores $D=\max\{D^{+},D^{-}\}$
 
-4. **Calcular el estadístico de prueba.**
-5. **Buscar el valor del estadístico H en la Tabla de Chi Cuadrado con k-1 grados de libertad, k = numero de grupos.**
-6. **Conclusiones**
-$$
+4. Por tanto, el criterio para rechazar o aceptar la prueba de hipótesis es:
+
+   - Si D Da => Aceptar Ho
+   - Si D > Da => Rechazar Ho
+     Donde:
+
+     $$
+     D_{\alpha}=\frac{C_{\alpha}}{k(n)}
+     $$
+
+     ![tALAs6](../Images/TablaS6.png)
+
+     K puede tomar los siguietnes valores:
+
+     $$
+     k(n)=\sqrt{n}-0.01+\frac{0.85}{\sqrt{n}}
+     $$
+
+## Prueba de Shapiro Wilk
+
+El Test de Shapiro—Wilk se usa para contrastar la normalidad de un conjunto de datos y plantea como hipótesis nula que una muestra xl,x2 xn, proviene de una población normalmente distribuida. Fue publicado en 1965 por Samuel Shapiro y Martin Wilk. Se considera uno
+de los test más potentes para el contraste de normalidad.
+1.- Ho: Los datos de la muestra siguen una distribución normal estándar
+111: Los datos de la muestra no siguen una distribución normal estándar
