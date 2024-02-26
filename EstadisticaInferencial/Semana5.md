@@ -171,3 +171,4 @@ $$
 Si $Z\alpha/2$ < $Z$ < $Z1-\alpha/2$
 
 Se acepta la $H_0$
+

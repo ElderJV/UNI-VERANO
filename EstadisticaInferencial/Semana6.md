@@ -233,7 +233,6 @@ La prueba de bondad de ajuste Chi-cuadrado es una prueba estadística que permit
 
 ¿Los datos de la muestra son coherentes con una distribución supuesta?
 
-## Prueba de Independencia
 
 1. **Plantear Hipotesis**
 
@@ -273,5 +272,68 @@ La prueba de bondad de ajuste Chi-cuadrado es una prueba estadística que permit
     $gl = k-m-1$
 
     Donde: $K$ = Número de categorias o clases | $m$ = Número de parametros estimados
-5. **Descicion estadistica y conclusiones**
+
+    $m$ sera igual a = 0 Cuando no se estima el parametro P
+
+    $m$ sera igual a = 1 Cuando se estima el parametro P
+
+5.  **Descicion estadistica y conclusiones**
+
+    * Si $Xi_{cal}\geq{Xi_{Tab}}$  **(Se Rechaza H0)**
+    * Si $Xi_{cal}<{Xi_{Tab}}$ **(Se Acepta H0)**
+
+# Prueba de Independencia 
+Se usa para analizar la frecuencia de dos variables con categorías múltiples para determinar si las dos variables son independientes o no. 
+
+Por ejemplo: 
+
+¿EI tipo de refresco preferido por un consumidor es independiente de su grupo etario? 
+
+¿El estado nutricional está asociado con el desempeño académico?
+
+1. **Plantear Hipotesis**
+
+- Ho: No existe relación entre las variables (Independencia).
+- H1: Existe relación entre las variables (No independencia).
+
+2. **Establecer el nivel de significación:**
+
+   $\alpha$=1%,5%,10%,etc...
+
+3. **Estadistico de prueba**
+
+   $$
+   x_{c}^{2}=\frac{\sum(O_{i}-E_{i})^{2}}{E_{i}}
+   $$
+
+   **Donde:**
+
+- O: frecuencia observada Generalmente dato del problema
+- E: frecuencia esperada -> Se tiene que estimar en la tabla de contingencia
+
+$$
+Frecuencia esperada(E) = \frac{Total Fila*Total Columna}{Gran Total}
+$$
+
+4.  **Region Critica**
+
+    ![alt text](../Images/XiCuadradoIndepen.png)
+
+5.  **Descicion estadistica y conclusiones**
+
+# Prueba de Homogeneidad
+
+Se emplea cuando estamos interesados en determinar si los datos correspondientes a dos o más muestras aleatorias provienen de la misma población.
+
+La prueba tiene la finalidad de conocer si la distribución de la variable  estudiada difiere en las "r" poblaciones subyacentes de las cuales se obtuvieron las muestras.
+
+**Hipótesis:**
+
+H0: Hay homogeneidad entre los grupos respecto a las categorías de la variable (hay igualdad entre la proporción de elementos de cada grupo que caen en la misma categoría de la variable).
+
+H1 : No hay homogeneidad (la proporción de elementos de cada grupo que caen en la misma categoría de la variable difieren).
+
+**La metodología para probar esta hipótesis es similar a la prueba de independencia.**
+
+![alt text](../Images/diferenciasIndeHomoge.png)
 
