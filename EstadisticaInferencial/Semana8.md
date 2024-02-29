@@ -86,11 +86,11 @@ $H_0:\beta_1 \neq 0$ (Si hay relación lineal entre X e Y)
 **Estadistico de Prueba**
 $$\large{F_C}=\frac{CM_R}{CM_E}\sim F_{(probabilidad,1,n-2)}$$
 
-**Paso 3.** Grafica de la Región Critica 
+**Paso 3.** Grafica de la Región Critica
 
 ![CorrelacionRegionCritica](../Images/RegionCriticaCoD.png)
 
-# Informe Adicional
+# Informacion Adicional
 
 Software Estadístico y el P-value
 
@@ -98,8 +98,8 @@ Un valor p oscila entre 0 y 1. El valor p es una probabilidad que mide la eviden
 
 **Decisión Estadística**
 
-* Si $P_{value}\leq\alpha$ Decisión: Rechazar Hipótesis nula
-* Si $P_{value}>\alpha$ Decisión: No Rechazar Hipótesis nula
+- Si $P_{value}\leq\alpha$ Decisión: Rechazar Hipótesis nula
+- Si $P_{value}>\alpha$ Decisión: No Rechazar Hipótesis nula
 
 $\alpha $= es **fijado** y generalmente es 0.05
 
@@ -111,3 +111,74 @@ que es el estimador máximo verosímil de $\sigma^2$, pero es un estimador sesga
 
 Un estimador insesgado de $\sigma^2$ es la varianza residual:
 $$S_{R}^{2}=\frac{\sum_{i=1}^{n}e_{i}^{2}}{n-2}$$
+
+# Regresion Lienal multiple
+
+El objetivo básico del **Análisis de Regresión Lineal Múltiple** es el de construir un modelo que **permita predecir o estimar el valor de una variable Y**, en base a un conjunto de variables $X_1,X_2...,X_k$
+
+A la variable Y se le llama variable dependiente, y es la que se quiere estimar o
+predecir. Las variables $X_1,X_2...,X_k$ son las variables independientes o variables predictoras.
+$$Y_i=\beta_0+\beta_1X_1+\beta_2X_2+\varepsilon_i$$
+
+Supuestos:
+
+- Los residuos tienen media 0.
+- La varianza de los residuos no depende de xi (homocedasticidad).
+- Los residuos son normales.
+- Los residuos son aleatorios.
+- Las variables XI, x2, etc. no están linealmente correlacionadas entre sí.
+
+El modelo poblacional de regresión lineal múltiple,con k variables independientes, es el siguiente:
+$$Y_i=\beta_0+\beta_1X_1+\beta_2X_2+\varepsilon_i$$
+
+**Donde:**
+
+Son parámetros desconocidos, llamados coeficientes de regresión. (i = 0,1,2,3,...,k) Son los errores del modelo, y se suponen independientes y normalmente distribuidos con media 0 y varianza $\sigma^2$
+$$\begin{aligned}\widehat{Y}=\beta_0+\beta_1X_1+\beta_2X_2+...+\beta_\text{k}X_\text{k}\end{aligned}$$
+Estos coeficientes son calculados a partir del método de los mínimos cuadrados.
+
+## Resolución de Regresión Lineal Múltiple: notación matricial
+
+Para determinar la ecuación de regresión lineal múltiple muestral, debemos primero identificar la variable dependiente y luego las variables independientes. Una vez identificados, formaremos nuestro sistema de matrices para cada uno de ellos, formando el siguiente sistema de ecuación de regresión múltiple, y ubicándolos de esta forma:
+$$Y_i=\beta_{k}X_{ik}+e_i$$
+Quedando el sistema de matrices definida de la siguiente manera:
+
+**Donde:**
+
+- $Y_i$: es la matriz de la variable dependiente
+- $X_i$: es la matriz de la variable independiente
+- $B_i$: es la matriz de los coeficientes predictores
+- $e_i$: es la matriz del error de estimación
+
+![notacionMatricial](../Images/notacionMatricial.png)
+**Nota:** En la primera columna de la matrizde la variable independiente se pone 1, que corresponde al valor de la constante.
+
+Para hallar el valor de cada uno de los coeficientes regresores p, resolveremos las
+siguientes operaciones matriciales:
+$$\beta=(X^{T}X)^{-1}X^{T}Y$$
+Donde:
+
+- $X^T$: Es la matriz transpuesta de la variable independiente
+- $(X^T X)^{-1}$ :es la matriz inversa
+- $\beta$ : es Ia matriz de los coeficientes regresores
+  $$\beta=(X^TX)^{-1}X^TY\rightarrow\beta=\begin{bmatrix}\beta_0\\\beta_1\\.\\.\\\beta_k\end{bmatrix}$$
+
+Coeficiente de regresión en el caso de dos variables independientes:
+**Matrices**
+
+$$
+A=X^TX=\begin{bmatrix}n&\sum_{i=1}^nX_{1i}&\sum_{i=1}^nX_{2i}\\\sum_{i=1}^nX_{1i}&\sum_{i=1}^nX_{1i}^2&\sum_{i=1}^nX_{1i}X_{2i}\\\sum_{i=1}^nX_{2i}&\sum_{i=1}^nX_{1i}X_{2i}&\sum_{i=1}^nX_{2i}^2\end{bmatrix}
+$$
+
+$$
+G=X^TY=\begin{bmatrix}\sum_{i=1}^nY_i\\\\\sum_{i=1}^nX_{1i}Y_i\\\\\sum_{i=1}^nX_{2i}Y_i\end{bmatrix}
+$$
+
+$$\beta=A^{-1}\boldsymbol{G}=\begin{bmatrix}\beta_0\\\beta_1\\\beta_2\end{bmatrix}$$
+
+Coeficiente de regresión en el caso de dos variables independientes: Sistema de ecuaciones
+
+$$\sum Y=n\beta_0+\beta_1\sum X_1+\beta_2\sum X_2$$
+$$\sum Y=n\beta_0+\beta_1\sum X_1+\beta_2\sum X_2$$
+$$\sum X_2Y=\beta_0\sum X_2+\beta_1\sum X_1X_2+\beta_2\sum{X_2}^2$$
+
