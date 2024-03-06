@@ -182,3 +182,63 @@ $$\sum Y=n\beta_0+\beta_1\sum X_1+\beta_2\sum X_2$$
 $$\sum Y=n\beta_0+\beta_1\sum X_1+\beta_2\sum X_2$$
 $$\sum X_2Y=\beta_0\sum X_2+\beta_1\sum X_1X_2+\beta_2\sum{X_2}^2$$
 
+# Matriz Varianza Covarianza
+
+Una matriz de varianzas-covarianzas es una matriz
+cuadrada que contiene las varianzas y covarianzas
+asociadas con diferentes variables.
+Los elementos de la diagonal de la matriz contienen las
+varianzas de las variables, mientras que los elementos
+que se encuentran fuera de Ia diagonal contienen las
+covarianzas entre todos los pares posibles de variables.
+La matriz de varianzas — covarianzas viene definida de
+la siguiente manera:
+
+$$
+VC=\begin{bmatrix}\sigma_y^2&S_{yX_1}&...&S_{yX_m}\\S_{X_1y}&\sigma_{X_1}^2&...&\vdots\\\vdots&\vdots&\ddots&\vdots\\S_{X_ny}&...&...&\sigma_{X_m}^2\end{bmatrix}
+$$
+
+Donde:
+
+- $\large\sigma^2_y$: representa la varianza de la variable y respecto a su media
+- $\large{S_{yX_n}}$: representa la covarianza de la variable y respecto a la variable $X_n$
+
+Para obtener los valores de la matriz de varianza covarianza se realizan los siguientes cálculos:
+$$\sigma_y^2=\frac{\sum_{i=1}^NY_i}N-\bar{Y}^2$$
+$$S_{YX_1}=\frac{\sum_{i=1}^NY_iX_{1i}}{N}-\bar{Y}\bar{X}_{1i}$$
+
+Se realiza de la misma manera para cada variable que se tenga del modelo de regresión múltiple.
+
+# Intervalo de Confianza
+
+Como en la regresión lineal simple, en la regresión múltiple es posible interpretar el valor $\hat{y}$ de dos formas:
+* $\hat{y}$ puede interpretarse como la **estimación de la media** de la subpoblación de los valores de Y que se supone existen para combinaciones particulares de valores X.
+* $\hat{y}$ es el **valor que más probablemente asumirá Y** para los valores dados de las Xi.
+
+# Intervalo de confianza para la respuesta media:
+
+De acuerdo con esta interpretación, $\hat{y}$ es una estimación, y cuando se utiliza para este propósito, a la ecuación se le llama **ecuación de estimación.**
+
+Cuando $\hat{y}$ se interpreta como una estimación de la
+media de la población, al intervalo se le llama **intervalo
+de confianza.**
+$$IC\left(\mu_{\gamma|X_{0}}\right)=\widehat{\gamma}_{0}\pm t_{\left(1-\frac{a}{2}\right)}\sqrt{CME\left[x'_{0}(X'X)^{-1}x_{0}\right]}$$
+
+Donde:
+* La distribución t con $n-k-1$ grados de libertad (k: número de variables independientes). 
+* $x_o$ es el vector que contiene los valores de las
+variables independientes para los cuales se desea
+hacer el pronóstico.
+* CME es:
+$$S=\sqrt{\frac{\sum(y-\widehat{y})^2}{n-k-1}}=\frac{\sqrt{y'y-\beta'X'y}}{n-k-1}=\sqrt{CME}$$
+
+# Intervalo de predicción para $Y_0$
+
+En este caso, $\hat{y}$ es el valor pronosticado o valor de predicción de Y, y a la ecuación se le llama ecuación de predicción.
+
+Cuando $\hat{y}$ se interpreta como un valor de predicción de Y, al intervalo se le llama intervalo de predicción.
+$$IP(y)=\hat{\gamma}_{0}\pm t_{\left(1-\frac{\alpha}{2}\right)}\sqrt{CME[1+{x'}_{0}(X'X)^{-1}x_{0}]}$$
+Donde:
+La distribución t con $n-k-1$ grados de libertad y CME es:
+$$S=\sqrt{\frac{\sum(y-\hat{y})^2}{n-k-1}}=\frac{\sqrt{y'y-\beta'X'y}}{n-k-1}=\sqrt{CME}$$
+
